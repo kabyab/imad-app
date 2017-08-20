@@ -8,7 +8,7 @@ button.onclick = function() {
   alert('Linked');
   // Capture the response and store it in a variable
   request.onreadystatechange = function() {
-    if (request.readystate === XMLHttpRequest.DONE) {
+    if (request.readyState === XMLHttpRequest.DONE) {
         alert('Entered');
         if (request.status === 200) {
             alert('Clicked');
