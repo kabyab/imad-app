@@ -20,3 +20,10 @@ body {
     height: 200px;
 }
 
+.container {
+    text-align: center;
+    font-family: sans-serif;
+    color: grey;
+    padding-left: 20px;
+    padding-right: 20px;
+}
