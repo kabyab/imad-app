@@ -23,8 +23,8 @@ body {
 .container {
     font-family: sans-serif;
     max-width: 800px;
-    color: grey;
-    margin-left: 250px;
+    margin: 0 auto;
+    color: #4c4848;
     padding-left: 20px;
     padding-right: 20px;
 }
