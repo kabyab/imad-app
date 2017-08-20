@@ -1,9 +1,9 @@
 console.log('Loaded!');
 
 // Change content
-var content = document.getElementById('main-text');
+/*var content = document.getElementById('main-text');
 
-content.innerHTML = 'Javascript changed me!!';
+content.innerHTML = 'Javascript changed me!!';*/
 
 //Move image
 var img = document.getElementById('madi');
