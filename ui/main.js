@@ -24,7 +24,7 @@ button.onclick = function() {
 
 var submit = document.getElementById('submit');
 
-submit.onclick = function() {
+/*submit.onclick = function() {
     
     var request = new XMLHttpRequest();
   
@@ -46,4 +46,12 @@ submit.onclick = function() {
     var nametext = document.getElementById('name').value;
     request.open('GET', 'http://bandokabs.imad.hasura-app.io/submit-name/' + nametext, true);
     request.send(null);
+};*/
+
+submit.onclick = function() {
+    var firstname = document.getElementById('name').value;
+    var list = document.getElementById('namelist');
+    var entry = document.createElement('li');
+    entry.appendChild(document.createTextNode(firstname));
+    list.appendChild(entry);
 };
