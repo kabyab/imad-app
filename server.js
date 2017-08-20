@@ -90,6 +90,11 @@ app.get('/:articleName', function(req, res) {
     res.send(createTemplate(articles[articleName]));
 });
 
+var counter = 0;
+app.get('/counter', function(req, res) {
+    counter = counter + 1;
+    res.send(counter.toString());
+});
 /* The entire code below is replaced by the code above...
 app.get('/article-one', function (req, res) {
   // res.send('Article one requested and will be served here...'); 
