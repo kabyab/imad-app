@@ -27,5 +27,5 @@ var submit = document.getElementById('submit');
 var list = document.getElementById('namelist');
 
 submit.onclick = function() {
-      list.append(`<li>${nametext}</li>`);
+      list.append('<li>' + nametext + '</li>');
 };
