@@ -1,24 +1,22 @@
 console.log('Loaded!');
 
-// Change content
-/*var content = document.getElementById('main-text');
+var button = document.getElementById('counter');
 
-content.innerHTML = 'Javascript changed me!!';*/
-
-//Move image
-var img = document.getElementById('madi');
-var marginLeft = 0;
-
-function moveRight () {
-    marginLeft = marginLeft + 1;
-    img.style.marginLeft = marginLeft + 'px';
-}
-
-img.onclick = function() {
-  var interval = setInterval(moveRight, 50);  
+button.onclick = function() {
+  // Create a request object
+  var request = new XMLHttpRequest();
+  
+  // Capture the response and store it in a variable
+  request.onreadystatechange = function() {
+    if (request.readystate === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+    }  
+  };
+  
+  request.open('GET', 'http://bandokabs.imad.hasura-app.io/counter', true);
+  request.send(null);
 };
-
-/*
-img.onclick = function () {
-  img.style.marginLeft = '100px';  
-};*/
