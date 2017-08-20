@@ -21,11 +21,12 @@ button.onclick = function() {
   request.send(null);
 };
 
-var namevar = document.getElementById('name');
-var nametext = namevar.value;
+var nametext = document.getElementById('name').value;
 var submit = document.getElementById('submit');
 var list = document.getElementById('namelist');
 
 submit.onclick = function() {
-      list.append('<li>' + nametext + '</li>');
+    var entry = document.createElement('li');
+    entry.appendChild(document.createTextNode(nametext));
+    list.appendChild(entry);
 };
