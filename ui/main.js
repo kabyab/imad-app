@@ -20,3 +20,12 @@ button.onclick = function() {
   request.open('GET', 'http://bandokabs.imad.hasura-app.io/counter', true);
   request.send(null);
 };
+
+var namevar = document.getElementById('name');
+var nametext = namevar.value;
+var submit = document.getElementById('submit');
+var list = document.getElementById('namelist');
+
+submit.onclick = function() {
+      list.append(`<li>${nametext}</li>`);
+};
