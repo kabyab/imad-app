@@ -27,6 +27,7 @@ var list = document.getElementById('namelist');
 
 submit.onclick = function() {
     var entry = document.createElement('li');
+    entry.innerHTML = nametext;
     entry.appendChild(document.createTextNode(nametext));
     list.appendChild(entry);
 };
