@@ -7,7 +7,7 @@ var dbconfig = {
     user: 'bandokabs',
     database: 'bandokabs',
     host: 'db.imad.hasura-app.io',
-    password: 'db-bandokabs-28174'
+    password: process.env.DB_PASSWORD
 };
 
 var app = express();
@@ -64,7 +64,6 @@ app.get('/test-db', function(req, res) {
         } else {
             res.send(JSON.stringify(result));
         }
-        pool.end();
     });
 });
 

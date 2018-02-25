@@ -4,7 +4,7 @@
   "description": "IMAD course app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "DB_PASSWORD=db-bandokabs-28174 node server.js"
   },
   "author": "",
   "license": "ISC",
