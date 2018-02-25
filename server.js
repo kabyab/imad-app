@@ -96,29 +96,6 @@ app.get('/articles/:articleId', function(req, res) {
         }
     });
 });
-// app.get('/:articleName', function(req, res) {
-//     var articleName = req.params.articleName;
-//     res.send(createTemplate(articles[articleName]));
-// });
-/* The entire code below is replaced by the code above...
-app.get('/article-one', function (req, res) {
-  // res.send('Article one requested and will be served here...'); 
-  //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-  res.send(createTemplate(articles.articleOne));
-});
-
-app.get('/article-two', function (req, res) {
-   //res.send('Article two requested and will be served here...'); 
-   //res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-   res.send(createTemplate(articles.articleTwo));
-});
-
-app.get('/article-three', function (req, res) {
-  // res.send('Article three requested and will be served here...'); 
-  //res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-  res.send(createTemplate(articles.articleThree));
-}); 
-*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
