@@ -7,7 +7,7 @@ var dbconfig = {
     user: 'bandokabs',
     database: 'bandokabs',
     host: 'http://db.imad.hasura-app.io',
-    password: process.env.DB_PASSWORD,
+    password: 'db-bandokabs-28174',
     port: 5432
 };
 
