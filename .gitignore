@@ -3,6 +3,3 @@ node_modules/
 
 # IDE
 .vscode/
-
-# Package JSON
-package.json
