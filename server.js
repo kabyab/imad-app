@@ -99,7 +99,7 @@ app.get('/test-db', function(req, res) {
     // make a select query
     // return a response with the results
     // alert("Inside test-db");
-    pool.query('SELECT * FROM test', function(er, result) {
+    pool.query("SELECT * FROM test", function(err, result) {
         if (err) {
             res.status(500).send(err.toString());
         } else {
