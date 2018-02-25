@@ -7,7 +7,7 @@ var dbconfig = {
     user: 'bandokabs',
     database: 'bandokabs',
     host: 'db.imad.hasura-app.io',
-    password: 'db-bandokabs-28174'
+    password: process.env.DB_PASSWORD
 };
 
 var app = express();
