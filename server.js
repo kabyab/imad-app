@@ -13,46 +13,6 @@ var dbconfig = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-    'article-one' : {
-        title : "Article One : Kabya Banerjee",
-        heading : "Article One",
-        date : "August 19, 2017",
-        content : ` 
-                <p>
-                    This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one.
-                </p>
-                <p>
-                    This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one.
-                </p>
-                <p>
-                    This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one.
-                </p>
-                <p>
-                    This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one. This is article one.
-                </p>`
-        },
-    'article-two' : {
-        title : "Article Two : Kabya Banerjee",
-        heading : "Article Two",
-        date : "August 25, 2017",
-        content : ` 
-                <p>
-                    This is article two. More content needs to be added.
-                </p>`
-        },
-    'article-three' : {
-        title : "Article Three : Kabya Banerjee",
-        heading : "Article Three",
-        date : "August 31, 2017",
-        content : ` 
-                <p>
-                    This is article three. More content needs to be added.
-                </p>`
-        }
-};
-
-
 function createTemplate(data) {
     var title = data.title;
     var heading = data.heading;
