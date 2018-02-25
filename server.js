@@ -112,6 +112,7 @@ var counter = 0;
 app.get('/counter', function(req, res) {
     counter = counter + 1;
     res.send(counter.toString());
+});
 
 var names = [];
 app.get('/submit-name/:name', function(req, res) {
@@ -121,12 +122,24 @@ app.get('/submit-name/:name', function(req, res) {
     res.send(JSON.stringify(names));
 });
 
-app.get('/:articleName', function(req, res) {
-    var articleName = req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+app.get('/articles/:articleId', function(req, res) {
+    pool.query("SELECT * FROM articles WHERE id = '" + req.params.articleId + "'", function(err, result) {
+        if (err)  {
+            res.status(500).send(err.toString());
+        } else {
+            if (result.rows.length === 0) {
+                res.status(404).send("Article Not Found");
+            } else {
+                var articleData = result.rows[0];
+                res.send(createTemplate(articleData));
+            }
+        }
+    });
 });
-
-});
+// app.get('/:articleName', function(req, res) {
+//     var articleName = req.params.articleName;
+//     res.send(createTemplate(articles[articleName]));
+// });
 /* The entire code below is replaced by the code above...
 app.get('/article-one', function (req, res) {
   // res.send('Article one requested and will be served here...'); 
