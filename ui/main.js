@@ -19,9 +19,9 @@ button.onclick = function() {
   
   if('withCredentials' in request) {
     request.withCredentials = true;
-    request.open('GET', 'http://localhost:8080/counter', true);
+    request.open('GET', 'http://bandokabs.imad.hasura-app.io/counter', true);
   } else if (typeof XDomainRequest != "undefined") {
-    request.open('GET', 'http://localhost:8080/counter');
+    request.open('GET', 'http://bandokabs.imad.hasura-app.io/counter');
   } else {
     request = null;
     console.log("CORS not supported!!!");
@@ -50,7 +50,7 @@ submit.onclick = function() {
     }
   }; 
     var nametext = document.getElementById('name').value;
-    var submitUrl = 'http://localhost:8080/submit-name/' + nametext;
+    var submitUrl = 'http://bandokabs.imad.hasura-app.io/submit-name/' + nametext;
     request.open('GET', submitUrl, true);
     request.send(null);
 };
