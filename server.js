@@ -90,6 +90,10 @@ function createTemplate(data) {
     return htmlTemplate;
 }
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
 var pool = new Pool(dbconfig);
 app.get('/test-db', function(req, res) {
     // make a select query
@@ -119,10 +123,6 @@ app.get('/submit-name/:name', function(req, res) {
 app.get('/:articleName', function(req, res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
-});
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 });
