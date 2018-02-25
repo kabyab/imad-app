@@ -30,6 +30,7 @@ button.onclick = function() {
 };
 
 var submit = document.getElementById('submit');
+var list = document.getElementById('namelist');
 
 submit.onclick = function() {
     
