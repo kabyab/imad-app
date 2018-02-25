@@ -11,5 +11,8 @@
   "dependencies": {
     "express": "^4.14.0",
     "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "pg": "^7.4.1"
   }
 }
