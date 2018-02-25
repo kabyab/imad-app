@@ -6,9 +6,8 @@ var Pool = require('pg').Pool;
 var dbconfig = {
     user: 'bandokabs',
     database: 'bandokabs',
-    host: 'localhost',
-    password: 'db-bandokabs-28174',
-    port: 5432
+    host: 'http://db.imad.hasura-app.io',
+    password: 'db-bandokabs-28174'
 };
 
 var app = express();
